@@ -1,20 +1,22 @@
-# scorn
+# Scorn
 
 ![scorn](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+A 42-key split keyboard inspired by the Corne (crkbd) by Foostan but with increased pinky stagger and splayed columns. Designed with per-key RGB and dual OLED screens in mind.
 
 * Keyboard Maintainer: [fubarphill](https://github.com/fubarphill)
-* Hardware Supported: *The PCBs, controllers supported*
+* Hardware Supported: Built to use Pro Micro RP2040 controllers.
 * Hardware Availability: *Links to where you can find this hardware*
 
-Make example for this keyboard (after setting up your build environment):
+Compiling example for this keyboard (after setting up your build environment):
 
-    make scorn:default
+    qmk compile -kb scorn -km default
 
 Flashing example for this keyboard:
 
-    make scorn:default:flash
+    Once in bootloader mode, a removable drive should appear on your computer. Copy the generated uf2 file from the qmk_firmware root directory
+    to this removable drive. The controller will reset after flashing is complete.
+
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
@@ -22,6 +24,6 @@ See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_to
 
 Enter the bootloader in 3 ways:
 
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
+* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard or press the reset button
+* **Physical reset button**: Quickly double-press the reset button
 * **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
